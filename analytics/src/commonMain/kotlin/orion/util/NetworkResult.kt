@@ -4,9 +4,9 @@ internal sealed class NetworkResult<out T> {
 
     internal data class Success<out T>(val data: T) : NetworkResult<T>()
 
-    internal sealed class Error : NetworkResult<Nothing>() {
-        class NetworkError(val messages: List<String>) : Error()
-        data object GenericError : Error()
+    internal sealed class Error(val messages: List<String>) : NetworkResult<Nothing>() {
+        class NetworkError(messages: List<String>) : Error(messages)
+        class GenericError(messages: List<String>) : Error(messages)
     }
 }
 

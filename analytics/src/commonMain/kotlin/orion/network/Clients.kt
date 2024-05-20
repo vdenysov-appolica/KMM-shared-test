@@ -11,7 +11,9 @@ import io.ktor.client.plugins.defaultRequest
 import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logging
 import io.ktor.client.plugins.observer.ResponseObserver
+import io.ktor.http.ContentType
 import io.ktor.http.URLProtocol
+import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
@@ -32,13 +34,23 @@ internal fun createOrionClient(
     expectSuccess = true
 
     defaultRequest {
-        url {
-            protocol = URLProtocol.HTTPS
-            host = if (localStorage.getEnvironment() == OrionEnvironment.STAGING) Constants.Network.BASE_HOST_STAGING
-            else Constants.Network.BASE_HOST_PROD
+//        url {
+//            protocol = URLProtocol.HTTPS
+//            host = if (localStorage.getEnvironment() == OrionEnvironment.STAGING) Constants.Network.BASE_HOST_STAGING
+//            else Constants.Network.BASE_HOST_PROD
+//        }
+
+        // use when instead of if
+        val host = if (localStorage.getEnvironment() == OrionEnvironment.STAGING) {
+            Constants.Network.BASE_HOST_STAGING
+        } else {
+            Constants.Network.BASE_HOST_PROD
         }
+
         Logger.d { "Base url:${this.host}" }
-        headers.append("Content-Type", "application/json")
+//        headers.append("Content-Type", "application/json")
+        url(host)
+        contentType(ContentType.Application.Json)
         headers.append(Constants.Network.TRAVELLER_KEY_HEADER, Constants.Network.TRAVELLER_KEY)
     }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46B665BA2BEBC03A00E8327C /* Atlantis in Frameworks */ = {isa = PBXBuildFile; productRef = 46B665B92BEBC03A00E8327C /* Atlantis */; };
 		63ACC6AB2AAE3D8D00965310 /* iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ACC6AA2AAE3D8D00965310 /* iosApp.swift */; };
 		63ACC6AF2AAE3D8E00965310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63ACC6AE2AAE3D8E00965310 /* Assets.xcassets */; };
 		63ACC6B32AAE3D8E00965310 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63ACC6B22AAE3D8E00965310 /* Preview Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46B665BB2BEBC56A00E8327C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		63ACC6A72AAE3D8D00965310 /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63ACC6AA2AAE3D8D00965310 /* iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosApp.swift; sourceTree = "<group>"; };
 		63ACC6AE2AAE3D8E00965310 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46B665BA2BEBC03A00E8327C /* Atlantis in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +100,7 @@
 		63ACC6A92AAE3D8D00965310 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				46B665BB2BEBC56A00E8327C /* Info.plist */,
 				63ACC6D52AAE3DDB00965310 /* BreedListScreen.swift */,
 				63ACC6D62AAE3DDB00965310 /* BreedViewModel.swift */,
 				63ACC6AA2AAE3D8D00965310 /* iosApp.swift */,
@@ -150,6 +154,7 @@
 			);
 			name = ios;
 			packageProductDependencies = (
+				46B665B92BEBC03A00E8327C /* Atlantis */,
 			);
 			productName = ios;
 			productReference = 63ACC6A72AAE3D8D00965310 /* ios.app */;
@@ -224,6 +229,7 @@
 			);
 			mainGroup = 63ACC69E2AAE3D8D00965310;
 			packageReferences = (
+				46B665B82BEBC03A00E8327C /* XCRemoteSwiftPackageReference "atlantis" */,
 			);
 			productRefGroup = 63ACC6A82AAE3D8D00965310 /* Products */;
 			projectDirPath = "";
@@ -444,11 +450,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ios/Preview Content\"";
-				DEVELOPMENT_TEAM = 8UD86646U9;
+				DEVELOPMENT_TEAM = Q57A2LBJ24;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../allshared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ios/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "this is a test";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -469,7 +477,7 @@
 					"-framework",
 					allshared,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.kmmbridgeskie.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.volodymyrdenysov.kmmbridgeskie.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -488,11 +496,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ios/Preview Content\"";
-				DEVELOPMENT_TEAM = 8UD86646U9;
+				DEVELOPMENT_TEAM = Q57A2LBJ24;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../allshared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ios/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "this is a test";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -513,7 +523,7 @@
 					"-framework",
 					allshared,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.kmmbridgeskie.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.volodymyrdenysov.kmmbridgeskie.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -653,6 +663,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		46B665B82BEBC03A00E8327C /* XCRemoteSwiftPackageReference "atlantis" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ProxymanApp/atlantis.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.24.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		46B665B92BEBC03A00E8327C /* Atlantis */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46B665B82BEBC03A00E8327C /* XCRemoteSwiftPackageReference "atlantis" */;
+			productName = Atlantis;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 63ACC69F2AAE3D8D00965310 /* Project object */;
 }

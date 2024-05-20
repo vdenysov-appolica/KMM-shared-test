@@ -23,7 +23,9 @@ internal class RequestHandler(private val json: Json) {
                         parseError(raw)
                     }
 
-                    else -> NetworkResult.Error.GenericError
+                    else -> NetworkResult.Error.GenericError(
+                        listOf(throwable.message ?: throwable.toString())
+                    )
                 }
             }
         }
@@ -35,7 +37,7 @@ internal class RequestHandler(private val json: Json) {
             /*errorResponse.errors.map { it.description }*/
             NetworkResult.Error.NetworkError(messages = listOf(rawJSON))
         } catch (e: Exception) {
-            NetworkResult.Error.GenericError
+            NetworkResult.Error.GenericError(messages = listOf(e.message ?: e.toString()))
         }
     }
 }

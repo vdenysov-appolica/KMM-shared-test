@@ -17,6 +17,7 @@ import com.holidayextras.orion.storage.LocalStorage
 import com.holidayextras.orion.storage.SecureStorage
 import com.holidayextras.orion.storage.SecureStorageKey
 import com.holidayextras.orion.util.BundleHelper
+import com.holidayextras.orion.util.NetworkResult
 import com.holidayextras.orion.util.RequestHandler
 import com.holidayextras.orion.util.Timer
 import com.holidayextras.orion.util.getOrionUUIDString
@@ -64,7 +65,9 @@ class OrionManager(
     }
 
     private fun flushBuffer() {
+        println("xxx orion will flush buffer")
         if (eventBuffer.isNotEmpty()) {
+            println("xxx orion will log events")
             sendRequest(eventBuffer.toList())
             eventBuffer.clear()
         }
@@ -72,7 +75,13 @@ class OrionManager(
 
     private fun sendRequest(events: List<OrionEventBody>) {
         coroutineScope.launch {
-            orionDataSource.logMultipleEvents(events)
+            val result = orionDataSource.logMultipleEvents(events)
+
+            when (result) {
+                is NetworkResult.Error.GenericError -> println("xxx orion network call GENERIC ERROR: ${result.messages}")
+                is NetworkResult.Error.NetworkError -> println("xxx orion network call NETWORK ERROR: ${result.messages}")
+                is NetworkResult.Success -> println("xxx orion network call SUCCESS")
+            }
         }
     }
 
