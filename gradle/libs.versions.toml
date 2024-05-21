@@ -71,9 +71,6 @@ compose-activity = { module = "androidx.activity:activity-compose", version.ref 
 android-desugaring = { module = "com.android.tools:desugar_jdk_libs", version.ref = "android-desugaring" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 
-sharedlib-analytics = { module = "co.touchlab.kmmbridgekickstartskie:analytics-android-debug", version.ref = "sharedlib" }
-sharedlib-breeds = { module = "co.touchlab.kmmbridgekickstartskie:breeds-android-debug", version.ref = "sharedlib" }
-
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

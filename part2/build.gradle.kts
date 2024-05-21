@@ -19,15 +19,15 @@ kotlin {
         license = "BSD"
         extraSpecAttributes.put("swift_version", "\"5.0\"") // <- SKIE Needs this!
         framework {
-            export(project(":analytics"))
+//            export(project(":analytics"))
             isStatic = true
         }
     }
 
     sourceSets {
         commonMain.dependencies {
-            implementation(project(":breeds"))
-            api(project(":analytics"))
+//            implementation(project(":breeds"))
+//            api(project(":analytics"))
         }
     }
 }

@@ -14,8 +14,6 @@
 		63ACC6BD2AAE3D8E00965310 /* iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ACC6BC2AAE3D8E00965310 /* iosTests.swift */; };
 		63ACC6C72AAE3D8E00965310 /* iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ACC6C62AAE3D8E00965310 /* iosUITests.swift */; };
 		63ACC6C92AAE3D8E00965310 /* iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ACC6C82AAE3D8E00965310 /* iosUITestsLaunchTests.swift */; };
-		63ACC6D72AAE3DDB00965310 /* BreedListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ACC6D52AAE3DDB00965310 /* BreedListScreen.swift */; };
-		63ACC6D82AAE3DDB00965310 /* BreedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ACC6D62AAE3DDB00965310 /* BreedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +45,6 @@
 		63ACC6C22AAE3D8E00965310 /* iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63ACC6C62AAE3D8E00965310 /* iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosUITests.swift; sourceTree = "<group>"; };
 		63ACC6C82AAE3D8E00965310 /* iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		63ACC6D52AAE3DDB00965310 /* BreedListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedListScreen.swift; sourceTree = "<group>"; };
-		63ACC6D62AAE3DDB00965310 /* BreedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				46B665BB2BEBC56A00E8327C /* Info.plist */,
-				63ACC6D52AAE3DDB00965310 /* BreedListScreen.swift */,
-				63ACC6D62AAE3DDB00965310 /* BreedViewModel.swift */,
 				63ACC6AA2AAE3D8D00965310 /* iosApp.swift */,
 				63ACC6AE2AAE3D8E00965310 /* Assets.xcassets */,
 				63ACC6B02AAE3D8E00965310 /* ios.entitlements */,
@@ -293,8 +287,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63ACC6D72AAE3DDB00965310 /* BreedListScreen.swift in Sources */,
-				63ACC6D82AAE3DDB00965310 /* BreedViewModel.swift in Sources */,
 				63ACC6AB2AAE3D8D00965310 /* iosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
