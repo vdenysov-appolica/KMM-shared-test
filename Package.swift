@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let packageName = "allshared"
+let packageName = "orion"
 
 let package = Package(
     name: packageName,

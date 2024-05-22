@@ -1,24 +1,24 @@
 Pod::Spec.new do |spec|
-    spec.name                     = 'allshared'
+    spec.name                     = 'orion'
     spec.version                  = '0.1'
     spec.homepage                 = 'https://www.touchlab.co'
     spec.source                   = { :http=> ''}
     spec.authors                  = ''
     spec.license                  = ''
     spec.summary                  = 'KMMBridgeSKIETemplate'
-    spec.vendored_frameworks      = 'build/cocoapods/framework/allshared.framework'
+    spec.vendored_frameworks      = 'build/cocoapods/framework/orion.framework'
                 
     spec.ios.deployment_target = '13.5'
                 
                 
     spec.pod_target_xcconfig = {
-        'KOTLIN_PROJECT_PATH' => ':allshared',
-        'PRODUCT_MODULE_NAME' => 'allshared',
+        'KOTLIN_PROJECT_PATH' => ':orion',
+        'PRODUCT_MODULE_NAME' => 'orion',
     }
                 
     spec.script_phases = [
         {
-            :name => 'Build allshared',
+            :name => 'Build Orion',
             :execution_position => :before_compile,
             :shell_path => '/bin/sh',
             :script => <<-SCRIPT

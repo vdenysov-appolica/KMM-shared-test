@@ -14,4 +14,4 @@ dependencyResolutionManagement {
     }
 }
 
-include("allshared", ":testapps:android")
+include("orion", ":testapps:android")

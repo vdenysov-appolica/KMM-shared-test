@@ -278,7 +278,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"$SRCROOT/../..\"\n./gradlew :allshared:embedAndSignAppleFrameworkForXcode\n";
+			shellScript = "cd \"$SRCROOT/../..\"\n./gradlew :orion:embedAndSignAppleFrameworkForXcode\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -445,7 +445,7 @@
 				DEVELOPMENT_TEAM = Q57A2LBJ24;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../allshared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../orion/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ios/Info.plist;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "this is a test";
@@ -467,7 +467,7 @@
 				OTHER_LDFLAGS = (
 					"-lsqlite3",
 					"-framework",
-					allshared,
+					orion,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.volodymyrdenysov.kmmbridgeskie.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -491,7 +491,7 @@
 				DEVELOPMENT_TEAM = Q57A2LBJ24;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../allshared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../orion/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ios/Info.plist;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "this is a test";
@@ -513,7 +513,7 @@
 				OTHER_LDFLAGS = (
 					"-lsqlite3",
 					"-framework",
-					allshared,
+					orion,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.volodymyrdenysov.kmmbridgeskie.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import allshared
+import orion
 import Atlantis
 
 @main
@@ -14,7 +14,7 @@ struct iosApp: App {
     //    private let handle: SDKHandle
     
     private let orionManager: OrionManager = {
-        let manager = OrionManager(secureStorage: allshared.SecureStorage(), bundleHelper: BundleHelper())
+        let manager = OrionManager(secureStorage: orion.SecureStorage(), bundleHelper: BundleHelper())
         manager.doInit(environment: .staging, language: "en_US", userAgent: "")
         return manager
     }()

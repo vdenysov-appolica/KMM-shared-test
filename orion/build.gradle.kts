@@ -52,7 +52,7 @@ android {
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
     }
-    namespace = "co.touchlab.kmmbridgekickstart.allshared"
+    namespace = "co.touchlab.kmmbridgekickstart.orion"
 }
 
 addGithubPackagesRepository()
