@@ -60,5 +60,4 @@ addGithubPackagesRepository()
 kmmbridge {
     mavenPublishArtifacts()
     spm()
-    frameworkName.set("Orion")
 }
